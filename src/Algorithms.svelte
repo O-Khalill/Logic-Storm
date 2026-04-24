@@ -6,9 +6,9 @@
      let array = $state<number[]>([]);
 
      function genArray() {
-          for (let i = 0; i < 20; ++i) {
-               array[i] = Math.floor(Math.random() * 100);
-          }
+          array = Array.from({ length: 12 }, () =>
+               Math.floor(Math.random() * 50),
+          );
      }
 </script>
 
