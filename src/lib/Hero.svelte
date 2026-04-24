@@ -1,6 +1,7 @@
 <script>
      import { slide } from "svelte/transition";
      import { Button } from "$lib/components/ui/button";
+     import { navigate } from "svelte-routing";
 </script>
 
 <div
@@ -12,6 +13,7 @@
           Interactive visualizations that make complex algorithms click.
      </h1>
      <Button
+          onclick={() => navigate("/algorithms")}
           class=" text-xl p-5 font-extrabold bg-[#ff3e00] text-white border-3 border-black"
      >
           Get started
