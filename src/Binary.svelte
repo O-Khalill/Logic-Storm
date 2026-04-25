@@ -5,12 +5,12 @@
 
      let running = $state(false);
      let active = $state<number[]>([]);
+     let sorted = $derived([...array].sort((a, b) => a - b));
      let bars = $state<number[]>([]);
      let found = $state();
 
      $effect(() => {
-          array.sort((a: number, b: number) => a - b);
-          bars = [...array];
+          bars = [...sorted];
           found = undefined;
      });
 
@@ -27,7 +27,7 @@
           while (left <= right) {
                let mid = Math.floor((left + right) / 2);
                active = [mid];
-               await sleep(100);
+               await sleep(400);
 
                if (bars[mid] === target) {
                     found = mid;

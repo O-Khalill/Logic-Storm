@@ -3,20 +3,19 @@
      import Head from "./lib/Head.svelte";
      import Hero from "./lib/Hero.svelte";
      import Algorithms from "./Algorithms.svelte";
+     import Particle from "./Particle.svelte";
 </script>
 
 <Router>
-     <div class="bg-[#121212] h-screen w-full flex flex-col">
-          <div
-               class="fixed top-25 left-20 w-72 h-72 bg-[#ff3e00] rounded-full blur-[120px] opacity-30 pointer-events-none animate-blob"
+     <div class="bg-[#121212] h-screen w-full flex flex-col bg-grid scanlines">
+          <!-- <div
+               class="fixed top-25 left-20 w-42 h-42 bg-[#ff3e00] rounded-full opacity-40 blur-[110px] pointer-events-none animate-blob"
           ></div>
 
           <div
-               class="fixed bottom-20 right-20 w-96 h-96 bg-[#ff3e00]
-          rounded-full blur-[120px] opacity-30 pointer-events-none
-          animate-blob"
+               class="fixed bottom-25 right-20 w-42 h-72 bg-[#ff3e00] rounded opacity-40 blur-[110px] pointer-events-none animate-blob"
           ></div>
-
+ -->
           <Head />
           <Route path="/">
                <div class="flex items-center flex-1 justify-center">
@@ -26,5 +25,7 @@
           <Route path="/algorithms">
                <Algorithms />
           </Route>
+
+          <Particle />
      </div>
 </Router>

@@ -22,7 +22,7 @@
           found = undefined;
           for (let i = 0; i < array.length; i++) {
                active = [i];
-               await sleep(100);
+               await sleep(400);
 
                if (array[i] === target) {
                     found = i;
