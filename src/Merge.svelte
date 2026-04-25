@@ -98,7 +98,7 @@
                     class:bg-[#ff3e00]={!swapping.includes(i) &&
                          !active.includes(i)}
                     class:scale-110={swapping.includes(i)}
-                    style="height: {item * 6}px"
+                    style="height: {item * 6 + 10}px"
                >
                     {item}
                </div>

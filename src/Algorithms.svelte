@@ -1,14 +1,24 @@
 <script lang="ts">
      import { Button } from "$lib/components/ui/button";
      import Sorting from "./Sorting.svelte";
+     import Searching from "./Searching.svelte";
+
      let selected = $state("");
 
      let array = $state<number[]>([]);
+     let target = $state();
 
      function genArray() {
           array = Array.from({ length: 12 }, () =>
-               Math.floor(Math.random() * 50),
+               Math.ceil(Math.random() * 50),
           );
+     }
+     function genArrayWithTarget() {
+          array = Array.from({ length: 12 }, () =>
+               Math.ceil(Math.random() * 50),
+          );
+
+          target = array[Math.floor(Math.random() * array.length)];
      }
 </script>
 
@@ -32,6 +42,7 @@
           <Button
                onclick={() => {
                     selected = "searching";
+                    genArrayWithTarget();
                }}
                class="px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 my-3 text-lg {selected ===
                'searching'
@@ -56,7 +67,7 @@
      {#if selected === "sorting"}
           <Sorting {array} />
      {:else if selected === "searching"}
-          <!-- <Searching /> -->
+          <Searching {array} {target} />
      {:else if selected === "path"}
           <!-- <Pathfinding /> -->
      {/if}

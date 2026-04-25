@@ -1,10 +1,8 @@
 <script lang="ts">
      import { Button } from "$lib/components/ui/button";
-     import Bubble from "./Bubble.svelte";
-     import Merge from "./Merge.svelte";
-     import Quick from "./Quick.svelte";
+     import Linear from "./Linear.svelte";
 
-     let { array } = $props();
+     let { array, target } = $props();
      let selected = $state("");
 </script>
 
@@ -16,39 +14,28 @@
 
      <div class="flex gap-4">
           <Button
-               onclick={() => (selected = "bubble")}
+               onclick={() => (selected = "Linear")}
                class="px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 {selected ===
                'bubble'
                     ? 'bg-[#ff3e00]'
                     : ''}"
           >
-               Bubble Sort
+               Linear search
           </Button>
           <Button
-               onclick={() => (selected = "merge")}
+               onclick={() => (selected = "Binary")}
                class="px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 {selected ===
                'merge'
                     ? 'bg-[#ff3e00]'
                     : ''}"
           >
-               Merge Sort
-          </Button>
-          <Button
-               onclick={() => (selected = "quick")}
-               class="px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 {selected ===
-               'quick'
-                    ? 'bg-[#ff3e00]'
-                    : ''}"
-          >
-               Quick Sort
+               Binary search
           </Button>
      </div>
 
-     {#if selected === "bubble"}
-          <Bubble {array} />
-     {:else if selected === "merge"}
-          <Merge {array} />
-     {:else if selected === "quick"}
-          <Quick {array} />
+     {#if selected === "Linear"}
+          <Linear {array} {target} />
+          <!-- {:else if selected === "Binary""}
+          <Merge {array} /> -->
      {/if}
 </div>
