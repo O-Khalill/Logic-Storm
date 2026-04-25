@@ -9,12 +9,12 @@
      let target = $state();
 
      function genArray() {
-          array = Array.from({ length: 12 }, () =>
+          array = Array.from({ length: 15 }, () =>
                Math.ceil(Math.random() * 50),
           );
      }
      function genArrayWithTarget() {
-          array = Array.from({ length: 12 }, () =>
+          array = Array.from({ length: 15 }, () =>
                Math.ceil(Math.random() * 50),
           );
 
@@ -32,7 +32,7 @@
                     selected = "sorting";
                     genArray();
                }}
-               class="px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 my-3 text-lg {selected ===
+               class="px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 my-3 text-lg tracking-wide {selected ===
                'sorting'
                     ? 'bg-[#ff3e00]'
                     : 'bg-transparent'}"
@@ -44,7 +44,7 @@
                     selected = "searching";
                     genArrayWithTarget();
                }}
-               class="px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 my-3 text-lg {selected ===
+               class="px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 my-3 text-lg tracking-wide {selected ===
                'searching'
                     ? 'bg-[#ff3e00]'
                     : 'bg-transparent'}"
@@ -55,7 +55,7 @@
                onclick={() => {
                     selected = "path";
                }}
-               class="px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 my-3 text-lg {selected ===
+               class="tracking-wide px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 my-3 text-lg {selected ===
                'path'
                     ? 'bg-[#ff3e00]'
                     : 'bg-transparent'}"

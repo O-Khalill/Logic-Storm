@@ -9,6 +9,7 @@
      let found = $state();
 
      $effect(() => {
+          array.sort((a: number, b: number) => a - b);
           bars = [...array];
           found = undefined;
      });
@@ -17,17 +18,25 @@
           return new Promise((resolve) => setTimeout(resolve, ms));
      }
 
-     async function linearSearch() {
+     async function binarySearch() {
           running = true;
           found = undefined;
-          for (let i = 0; i < array.length; i++) {
-               active = [i];
+          let left = 0;
+          let right = bars.length - 1;
+
+          while (left <= right) {
+               let mid = Math.floor((left + right) / 2);
+               active = [mid];
                await sleep(100);
 
-               if (array[i] === target) {
-                    found = i;
+               if (bars[mid] === target) {
+                    found = mid;
                     await sleep(1000);
                     break;
+               } else if (bars[mid] < target) {
+                    left = mid + 1;
+               } else {
+                    right = mid - 1;
                }
           }
 
@@ -38,7 +47,7 @@
 
 <div class="flex flex-col items-center gap-4 font-sans">
      <button
-          onclick={linearSearch}
+          onclick={binarySearch}
           disabled={running}
           class="px-6 py-3 rounded-xl font-bold text-white bg-[#ff3e00] disabled:opacity-50"
      >

@@ -8,16 +8,16 @@
      let selected = $state("");
 </script>
 
-<div class="flex flex-col items-center gap-6 mt-10">
+<div class="flex flex-col items-center gap-6 mt-10 font-extrabold">
      <h1 class="text-4xl font-extrabold text-[#ff3e00] tracking-wide">
           Sorting Algorithms
      </h1>
-     <p class="text-gray-400 text-lg">Pick an algorithm to visualize</p>
+     <p class="text-gray-400 text-lg">Press on category to remake array</p>
 
      <div class="flex gap-4">
           <Button
                onclick={() => (selected = "bubble")}
-               class="px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 {selected ===
+               class="text-xl tracking-wide px-6 py-4.5 rounded-xl font-extrabold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 {selected ===
                'bubble'
                     ? 'bg-[#ff3e00]'
                     : ''}"
@@ -26,7 +26,7 @@
           </Button>
           <Button
                onclick={() => (selected = "merge")}
-               class="px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 {selected ===
+               class="text-xl tracking-wide px-8 py-4.5 rounded-xl font-extrabold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 {selected ===
                'merge'
                     ? 'bg-[#ff3e00]'
                     : ''}"
@@ -35,7 +35,7 @@
           </Button>
           <Button
                onclick={() => (selected = "quick")}
-               class="px-6 py-3 rounded-xl font-bold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 {selected ===
+               class="text-xl tracking-wide px-6 py-4.5 rounded-xl font-extrabold text-white border-2 border-[#ff3e00] hover:bg-[#ff3e00] transition-colors duration-200 {selected ===
                'quick'
                     ? 'bg-[#ff3e00]'
                     : ''}"
