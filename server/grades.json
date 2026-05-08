@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Moo7a el 7ara2",
+    "studentId": "S005",
+    "score": 10,
+    "total": 10,
+    "percentage": 100,
+    "date": "2025-01-14"
+  },
+  {
+    "name": "Mohamed monged",
+    "studentId": "S003",
+    "score": 9,
+    "total": 10,
+    "percentage": 90,
+    "date": "2025-01-12"
+  },
+  {
+    "name": "Asser Ragy",
+    "studentId": "S001",
+    "score": 8,
+    "total": 10,
+    "percentage": 80,
+    "date": "2025-01-10"
+  },
+  {
+    "name": "Yosra ",
+    "studentId": "S004",
+    "score": 7,
+    "total": 10,
+    "percentage": 70,
+    "date": "2025-01-13"
+  },
+  {
+    "name": "Yasmine Sabry",
+    "studentId": "S002",
+    "score": 6,
+    "total": 10,
+    "percentage": 60,
+    "date": "2025-01-11"
+  },
+  {
+    "name": "Omar Attia",
+    "studentId": "19231003",
+    "score": 10,
+    "total": 10,
+    "percentage": 100,
+    "date": "2026-05-07"
+  },
+  {
+    "name": "Omar Attia",
+    "studentId": "S006969",
+    "score": 8,
+    "total": 10,
+    "percentage": 80,
+    "date": "2026-05-08"
+  },
+  {
+    "name": "Omar Attia",
+    "studentId": "S006969",
+    "score": 8,
+    "total": 10,
+    "percentage": 80,
+    "date": "2026-05-08"
+  },
+  {
+    "name": "Omar Attia",
+    "studentId": "S006969",
+    "score": 8,
+    "total": 10,
+    "percentage": 80,
+    "date": "2026-05-08"
+  },
+  {
+    "name": "Philo Emad",
+    "studentId": "S0067",
+    "score": 0,
+    "total": 10,
+    "percentage": 0,
+    "date": "2026-05-08"
+  }
+]

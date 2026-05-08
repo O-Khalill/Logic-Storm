@@ -5,6 +5,16 @@
   let running = $state(false);
   let active = $state<number[]>([]);
   let swapping = $state<number[]>([]);
+  let containerWidth = $state(800);
+
+  function barHeight(v: number) {
+    const factor = containerWidth > 640 ? 6 : containerWidth > 420 ? 4 : 3;
+    return v * factor + 10;
+  }
+
+  function showLabel() {
+    return containerWidth / bars.length >= 22;
+  }
 
   $effect(() => {
     bars = [...array];
@@ -64,19 +74,23 @@
     {running ? "Sorting..." : "Run"}
   </button>
   <div
-    class="flex items-end gap-3 px-6 py-3 border-2 border-[#ff3e00] rounded-xl overflow-hidden min-h-100"
+    bind:clientWidth={containerWidth}
+    class="flex items-end gap-0.75 sm:gap-2 md:gap-3 px-2 sm:px-4 md:px-6 py-3 border-2 border-[#ff3e00] rounded-xl w-full max-w-3xl overflow-x-auto"
+    style="min-height: {barHeight(50) + 24}px"
   >
     {#each bars as item, i (i)}
       <div
         animate:flip={{ duration: 300 }}
-        class="  w-10 rounded-t-md flex justify-center text-white text-center text-l font-extrabold border border-white transition-all duration-150 transform"
+        class="flex-1 min-w-4 max-w-12 rounded-t-md flex items-end justify-center overflow-hidden text-white text-center font-extrabold border border-white transition-all duration-150 transform"
         class:bg-red-500={swapping.includes(i)}
         class:bg-yellow-400={!swapping.includes(i) && active.includes(i)}
         class:bg-[#ff3e00]={!swapping.includes(i) && !active.includes(i)}
         class:scale-110={swapping.includes(i)}
-        style="height: {item * 6 + 10}px"
+        style="height: {barHeight(item)}px"
       >
-        {item}
+        {#if showLabel()}
+          <span class="text-[9px] sm:text-xs leading-none pb-0.5">{item}</span>
+        {/if}
       </div>
     {/each}
   </div>
