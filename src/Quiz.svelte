@@ -201,7 +201,7 @@
   <!-- ── REGISTER ───────────────────────────────────────────────────────────── -->
   {#if step === "register"}
     <div
-      class="w-full max-w-md bg-[#1a1a1a] border border-[#ff3e00]/30 rounded-2xl p-8 flex flex-col gap-5"
+      class="w-full max-w-md bg-[#1a1a1a] border border-[#ff3e00]/30 rounded-2xl p-5 sm:p-8 flex flex-col gap-5"
     >
       <div class="flex flex-col gap-2">
         <label
@@ -264,7 +264,7 @@
 
     <!-- question card -->
     <div
-      class="w-full max-w-2xl bg-[#1a1a1a] border border-[#ff3e00]/30 rounded-2xl p-8 flex flex-col gap-6"
+      class="w-full max-w-2xl bg-[#1a1a1a] border border-[#ff3e00]/30 rounded-2xl p-5 sm:p-8 flex flex-col gap-6"
     >
       <p class="text-lg sm:text-xl font-bold text-white leading-snug">
         {questions[current]?.q}
@@ -300,14 +300,15 @@
     {@const b = badge(pct)}
 
     <div
-      class="w-full max-w-md bg-[#1a1a1a] border border-[#ff3e00]/30 rounded-2xl p-8 flex flex-col items-center gap-6 text-center"
+      class="w-full max-w-md bg-[#1a1a1a] border border-[#ff3e00]/30 rounded-2xl p-5 sm:p-8 flex flex-col items-center gap-6 text-center"
     >
       <div class="flex flex-col items-center gap-3">
         <p class="text-gray-400 text-sm">
           {name} · <span class="font-mono">{studentId}</span>
         </p>
-        <p class="text-7xl font-extrabold text-[#ff3e00]">
-          {score}<span class="text-3xl text-gray-500">/{TOTAL}</span>
+        <p class="text-5xl sm:text-7xl font-extrabold text-[#ff3e00]">
+          {score}<span class="text-2xl sm:text-3xl text-gray-500">/{TOTAL}</span
+          >
         </p>
         <span class="px-4 py-1.5 rounded-full text-sm font-bold {b.cls}"
           >{b.text}</span

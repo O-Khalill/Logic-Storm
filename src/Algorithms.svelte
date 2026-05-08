@@ -92,8 +92,10 @@
   }
 </script>
 
-<div class="flex flex-col items-center gap-4 pb-10">
-  <h1 class="text-4xl font-extrabold text-[#ff3e00] tracking-wide">
+<div class="flex flex-col items-center gap-4 pb-10 px-4">
+  <h1
+    class="text-2xl sm:text-4xl font-extrabold text-[#ff3e00] tracking-wide text-center"
+  >
     Choose Your Algorithm Category
   </h1>
 

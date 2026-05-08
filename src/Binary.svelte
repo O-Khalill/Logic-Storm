@@ -78,7 +78,7 @@
     {#each bars as item, i (i)}
       <div
         animate:flip={{ duration: 300 }}
-        class="flex-1 min-w-4 max-w-12 rounded-t-md flex items-end justify-center overflow-hidden text-white text-center font-extrabold border border-white transition-all duration-150 transform"
+        class="flex-1 min-w-6 max-w-12 rounded-t-md flex items-end justify-center overflow-hidden text-white text-center font-extrabold border border-white transition-all duration-150 transform"
         class:bg-yellow-400={active.includes(i) && found === undefined}
         class:bg-[#ff3e00]={!active.includes(i) && found === undefined}
         class:bg-green-500={found === i}
